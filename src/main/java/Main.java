@@ -123,6 +123,8 @@ public class Main {
         /**
          * POS пытается инициировать события ONTRNSTATUS (информирование ECR об изменении статуса) и ONPRINT (информирование ECR о готовности данных для печати)
          */
+        File ontrnstatus = new File("src/json/ONTRNSTATUS.json");
+        File onprint = new File("src/json/ONPRINT.json");
         System.out.println("Try ONTRNSTATUS and ONPRINT event");
 
         if (!(scaner.nextInt() == 1)) {
