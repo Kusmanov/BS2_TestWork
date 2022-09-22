@@ -5,6 +5,10 @@ public class Main {
     public static void main(String[] args) {
         Scanner scaner = new Scanner(System.in);
 
+        /**
+         * ECR подготавливает итоговый счет
+         */
+
         System.out.println("""
                 UI ECR:
                 \tОжидается платеж за товар:
@@ -13,7 +17,7 @@ public class Main {
                 \tЦена: 1 EUR""");
 
         /**
-         * ECR инициирует команду UNLOCK в POS для ожидания оплаты
+         * ECR пытается инициировать команду UNLOCK в POS для ожидания оплаты
          * Сумма: 1
          * Волюта: EUR
          */
@@ -39,7 +43,7 @@ public class Main {
         }
 
         /**
-         * POS терминал верифицирует карту
+         * POS пытается верифицировать карту
          */
         System.out.println("Try Verification card");
 
@@ -48,7 +52,7 @@ public class Main {
         }
 
         /**
-         * POS инициирует событие ONCARD в ECR для информирования о прочтении карты
+         * POS пытается инициировать событие ONCARD в ECR для информирования его о прочтении карты
          */
         File oncard = new File("src/json/ONCARD.json");
         System.out.println("Try ONCARD event");
@@ -63,7 +67,7 @@ public class Main {
         System.out.println("200 OK");
 
         /**
-         * ECR отрабатывает событие ONCARD
+         * ECR пытается отработать событие ONCARD
          */
         System.out.println("Try processing ONCARD event");
 
@@ -72,7 +76,7 @@ public class Main {
         }
 
         /**
-         * ECR инициирует команду AUTHORIZE в POS для оплаты покупок.
+         * ECR пытается инициировать команду AUTHORIZE в POS для оплаты покупок.
          * Сумма: 1
          * Волюта: EUR
          */
@@ -89,7 +93,7 @@ public class Main {
         System.out.println("200 OK");
 
         /**
-         * POS отобразил сумму транзакции
+         * POS отображает сумму транзакции
          */
         System.out.println("Amount: 1 EUR");
 
@@ -103,7 +107,7 @@ public class Main {
         }
 
         /**
-         * POS подтверждает транзакцию оплаты картой
+         * POS пытается подтвердить транзакцию оплаты картой
          */
         System.out.println("Try perform pay");
 
@@ -112,12 +116,12 @@ public class Main {
         }
 
         /**
-         * POS отобразил статус оплаты
+         * POS отображает статус оплаты
          */
         System.out.println("Payment has been made");
 
         /**
-         * POS инициирует события ONTRNSTATUS (информирование ECR о изменении статуса), ONPRINT (информирование ECR о готовности данных для печати)
+         * POS пытается инициировать события ONTRNSTATUS (информирование ECR об изменении статуса) и ONPRINT (информирование ECR о готовности данных для печати)
          */
         System.out.println("Try ONTRNSTATUS and ONPRINT event");
 
@@ -126,21 +130,17 @@ public class Main {
         }
 
         /**
+         * HTTP сервер вернул код ответа: 200 - Success with response body
+         */
+        System.out.println("200 OK");
+
+        /**
          * ECR печатает чек
          */
-        System.out.println("Try print receipt");
-
-        if (!(scaner.nextInt() == 1)) {
-            Thread.currentThread().stop();
-        }
+        System.out.println("Print receipt");
 
         /**
-         * ECR распечатал чек
-         */
-        System.out.println("Here is a receipt");
-
-        /**
-         * ECR инициирует команду CLOSEDOC для подтверждения транзакции
+         * ECR пытается инициировать команду CLOSEDOC для подтверждения транзакции
          */
         File closedoc = new File("src/json/CLOSEDOC.json");
         System.out.println("Try CLOSEDOC command");
