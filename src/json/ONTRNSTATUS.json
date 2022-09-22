@@ -1,0 +1,31 @@
+{
+"eventName":"ONTRNSTATUS",
+"properties":
+{
+"operationId": "FCAB2EB6D0DFD12",
+"amountAuthorized": 1,
+"documentNr": "129663",
+"cryptogram":"",
+"authCode": "",
+"RRN": "",
+"STAN": "",
+"cardType": "Visa",
+"amountAdditional":[ ],
+"text": "",
+"state": "Approved",
+"authorizationState": "",
+"cardName": "Foreign Visa card",
+"APN": "VISA",
+"AID": "A000000004252",
+"CVMApplied": ["OfflinePIN", "Signature"],
+"authCenterName": "Bank of Europe",
+"tranSourceMedia": "MagnetSwipe",
+"PAN": "454520**********2012",
+"DCCResult": "DccNotOffered"
+},
+"result": {
+"resultCode": "OK",
+"resultMessage": "Operation completed successfully.",
+"resultTime": "20191212122022"
+}
+}

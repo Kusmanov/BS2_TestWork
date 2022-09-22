@@ -1,0 +1,13 @@
+{
+"eventName":"ONPRINT",
+"properties":
+{
+"receiptText": "Receipt",
+"documentNr": "129663"
+},
+"result": {
+"resultCode": "OK",
+"resultMessage": "Operation completed successfully.",
+"resultTime": "20191212122022"
+}
+}

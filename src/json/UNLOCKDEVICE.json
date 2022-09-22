@@ -1,0 +1,21 @@
+{
+"header":
+{
+"command": "UNLOCKDEVICE"
+},
+"params":
+{
+"posOperation": "AUTHORIZE",
+"amount": 1,
+"cashBackAmount": 0,
+"currencyCode": "978",
+"idleText": "Insert Card",
+"language": "EN",
+"ecrVersion": "Cashier-Bank-v12.4.5",
+"operatorId": "123",
+"operatorName": "Valentina K.",
+"cardTechs": [ "Mifare1K", "Mifare4K" ],
+"enabledTranSourceMedias": [ "EmvChip", "EmvContactless", "MagnetSwipe" ],
+"silentCardRead": false
+}
+}

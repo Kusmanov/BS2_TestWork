@@ -1,0 +1,37 @@
+{
+"eventName":"ONCARD",
+"properties":
+{
+"hash": "g2g9H12Ums5rt4H01vn",
+"track1": "10",
+"track2": "",
+"track3": "",
+"PAN": "************2012",
+"cardType": "Visa",
+"currencyCode": "978",
+"additionalCurrencyCodes":[ ],
+"cardData":[ ],
+"cardTechs": ["Mifare1K, Mifare4K"],
+"UID": "",
+"loyCard": false,
+"allowAuthorize": true,
+"allowPreAuthorize": true,
+"allowRefund": true,
+"fullAmountOnly": false,
+"noDiscounts": false,
+"reqPANL4Digit": false,
+"reqOriginalData": false,
+"allowCashBack": false,
+"allowInstallmentIssuer": true,
+"installmentFormIssuer": { },
+"allowInstallmentMerchant": true,
+"installmentFormMerchant": { },
+"allowInstallmentAcquirier": true,
+"installmentFormAcquirer": { }
+},
+"result": {
+"resultCode": "OK",
+"resultMessage": "Operation completed successfully.",
+"resultTime": "20191212122022"
+}
+}
